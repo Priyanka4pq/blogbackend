@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://priyankawrites.vercel.app",
     credentials: true,
   })
 );
@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
 app.get("/contact", (req, res)=>{
   res.send("Contact Page!")
 })
+
 async function main() {
   await mongoose.connect(process.env.MONGODB_URL);
   
