@@ -28,7 +28,7 @@ app.use("/api/auth", userRoutes);
 app.use("/api/blogs", blogRoutes);
 app.use("/api/comments", commentRoutes);
 app.get("/", (req, res) => {
-  res.send("Everything works now!");
+  res.send("Hello There!");
 });
 async function main() {
   await mongoose.connect(process.env.MONGODB_URL);
