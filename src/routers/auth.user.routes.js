@@ -41,7 +41,7 @@ router.post("/login", async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true, // enable this only when you have https://
       secure: true,
-      sameSite: true,
+      sameSite: "None",
     });
     console.log("Generated token", token);
     res.status(200).send({
