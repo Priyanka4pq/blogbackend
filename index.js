@@ -28,7 +28,7 @@ app.use("/api/auth", userRoutes);
 app.use("/api/blogs", blogRoutes);
 app.use("/api/comments", commentRoutes);
 app.get("/", (req, res) => {
-  res.send("Hotel Rooftop is running!......");
+  res.send("Everything works now!");
 });
 async function main() {
   await mongoose.connect(process.env.MONGODB_URL);
